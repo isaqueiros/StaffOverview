@@ -56,18 +56,17 @@ layout = [
     #[]
 
     [sg.Text("Annual Salary (£): ", size=25),
-    sg.Input(size=10, font=('Arial', 10))],
+    sg.Input(size=10, font=('Arial', 10),key='-SALARY-')],
     [sg.Text("Tax Band: ", size=25),
-     sg.Spin(values=['A','B','C','D'], size=8)],
-    #sg.Input(size=10, font=('Arial', 10))],
+     sg.Spin(values=['A','B','C','D'], size=8, key='-TAX-')],
     [sg.Text("Contracted Hours: ", size=25),
-     sg.Input(size=10, font=('Arial', 10))],
+     sg.Input(size=10, font=('Arial', 10),key='-CONTRACTED-')],
     [sg.Text("Days Worked per Week: ", size=25),
-     sg.Spin(values=[i for i in range(1,8)], initial_value=5, size=8)],
+     sg.Spin(values=[i for i in range(1,8)], initial_value=5, size=8, key='-DAYS/WEEK-')],
     [sg.Text("Holidays Entitlement (Days): ", size=25),
-     sg.Input(size=10, font=('Arial', 10))],
+     sg.Input(size=10, font=('Arial', 10), key='-ENTITLE-')],
     [sg.Text("Carried Days from Previous Year: ", size=25),
-     sg.Spin(values=[i for i in range(0,11)], initial_value=0, size=8)],
+     sg.Spin(values=[i for i in range(0,11)], initial_value=0, size=8, key='-CARRIED-')],
 
     [sg.Button('Check Summary'),
     sg.Cancel('Exit')]
